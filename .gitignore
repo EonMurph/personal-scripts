@@ -1,2 +1,5 @@
 scripts_data
 templates/*.yaml
+.vscode
+__pycache__
+*.sqlite3
