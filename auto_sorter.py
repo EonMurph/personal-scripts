@@ -1,7 +1,7 @@
 import frontmatter
 import shutil
 from pathlib import Path, PurePath
-from scripts_data import *
+from scripts_data import OBSIDIAN_ROOT
 
 # Set values
 tags = {'study': 'module', 'daily': 'date-created',

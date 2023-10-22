@@ -3,7 +3,7 @@ import argparse
 import subprocess
 from datetime import date
 from pathlib import Path
-from scripts_data import *
+from scripts_data import OBSIDIAN_ROOT
 
 # creates arguments for command line
 parser = argparse.ArgumentParser(
