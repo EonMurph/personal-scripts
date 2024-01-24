@@ -50,4 +50,4 @@ if (md_file) not in [str(path.name) for path in Path(OBSIDIAN_ROOT).glob('**/*')
 
         file.write(markdown)  # writes markdown template
 
-subprocess.run(['python', 'auto_sorter.py'])
+subprocess.run(['python', 'E:/scripts/auto_sorter.py'])
