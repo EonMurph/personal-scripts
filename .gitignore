@@ -3,3 +3,4 @@ templates/*.yaml
 .vscode
 __pycache__
 *.sqlite3
+database_files/movies.yaml
