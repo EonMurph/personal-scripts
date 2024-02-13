@@ -3,5 +3,5 @@ templates/*.yaml
 __pycache__
 *.sqlite3
 database_files/movies.yaml
-utils/paths
-utils/__init__
+utils/paths.py
+utils/__init__.py
