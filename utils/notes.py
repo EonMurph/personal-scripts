@@ -1,3 +1,4 @@
+import frontmatter
 from pathlib import Path
 from utils.paths import PERSONAL_ROOT
 from utils.frontmatter_manipulation import get_date, get_frontmatter
@@ -15,6 +16,15 @@ def get_destination(file):
             "daily", "monthly", "weekly", "quarterly", "yearly"]:
         data["year"], data["month"] = get_date(post)
         data["type"] = post["type"]
-        destination = Path(PERSONAL_ROOT) / data["type"].capitalize() / data["year"] / data["month"]
-        
+        destination = Path(PERSONAL_ROOT) / \
+            data["type"].capitalize() / data["year"] / data["month"]
+
     return destination
+
+
+def get_files():
+    files = [Path(path).absolute()
+             for path in Path(PERSONAL_ROOT).rglob("*.md")
+             if frontmatter.check(path)]
+
+    return files
