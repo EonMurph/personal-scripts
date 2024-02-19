@@ -6,13 +6,6 @@ import argparse
 from argparse import RawTextHelpFormatter
 import yaml
 
-print("pay deposit")
-print("pay deposit")
-print("pay deposit")
-print("pay deposit")
-print("pay deposit")
-print("pay deposit")
-
 # Initialise terminal arguments
 parser = argparse.ArgumentParser(
     description="deletes, updates, and adds to a database based on inputted dicts",
