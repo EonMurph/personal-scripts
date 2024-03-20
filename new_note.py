@@ -12,8 +12,8 @@ parser.add_argument("file", type=str, help="enter the yaml file")
 args = parser.parse_args()
 
 
-yaml_file = f"E://scripts/templates/{args.file}.yaml"
-with open(yaml_file, "r") as yaml_file:
+yaml_file_location = f"E://scripts/templates/{args.file}.yaml"
+with open(yaml_file_location, "r") as yaml_file:
     template = yaml.full_load(yaml_file)
 
     md_frontmatter = template.get("frontmatter", None)
