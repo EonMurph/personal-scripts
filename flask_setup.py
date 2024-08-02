@@ -10,7 +10,7 @@ if not os.path.exists(f"{cwd}/.flaskenv"):
 
 if not os.path.exists(f"{cwd}/app.py"):
     with open("app.py", "w") as outFile:
-        lines = ["from flask import Flask, render_template\n\n", "o = Flask(__name__)\n", 'app.config["SECRET_KEY"] = "this-is-my-secret-key"\n\n']
+        lines = ["from flask import Flask, render_template\n\n", "app = Flask(__name__)\n", 'app.config["SECRET_KEY"] = "this-is-my-secret-key"\n\n']
         outFile.writelines(lines)
 
 if not os.path.exists(f"/templates/"):
