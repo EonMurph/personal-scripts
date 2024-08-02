@@ -1,0 +1,12 @@
+---
+title: 'md_file = date.today().strftime("%Y-%b-%d") + ".md"'
+frontmatter:
+  type: 'daily'
+  date-created: "md_frontmatter['date-created'] = date.today().strftime('%Y-%b-%d')"
+
+markdown: |
+  # DATE-PLACEHOLDER
+
+  ## Lectures
+
+...
