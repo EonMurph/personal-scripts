@@ -12,7 +12,7 @@ parser.add_argument("file", type=str, help="enter the yaml file")
 args = parser.parse_args()
 
 
-yaml_file_location = f"E://scripts/templates/{args.file}.yaml"
+yaml_file_location = f"templates/{args.file}.yaml"
 with open(yaml_file_location, "r") as yaml_file:
     template = yaml.full_load(yaml_file)
 
@@ -47,11 +47,11 @@ if (md_file) not in (files:=[str(path.name) for path in Path(PERSONAL_ROOT).glob
 
         file.write(markdown)  # writes markdown template
 
-subprocess.run(["python", "E://scripts/auto_sorter.py"])
+subprocess.run(["python", "auto_sorter.py"])
 
 for file in get_files():
     if str(file.name).replace(".md", "") == date.today().strftime("%Y-%b-%d"):
         destination = get_destination(file)
         break
-subprocess.run(["code", destination], shell=True)
-subprocess.run(["code", destination / md_file], shell=True)
+subprocess.run(["code.cmd", destination], shell=True)
+subprocess.run(["code.cmd", destination / md_file], shell=True)
